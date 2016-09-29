@@ -18,9 +18,15 @@
 # Imports the Google Cloud client library
 from gcloud import storage
 
-# Instantiates the client library
-storage_client = storage.Client(project='YOUR_PROJECT_ID')
+# Your Google Cloud Platform project ID
+project_id = 'YOUR_PROJECT_ID'
 
-# Creates a new bucket
-bucket = storage_client.create_bucket('my-new-bucket')
+# Instantiates a client
+storage_client = storage.Client(project=project_id)
+
+# The name for the new bucket
+bucket_name = 'my-new-bucket'
+
+# Creates the new bucket
+bucket = storage_client.create_bucket(bucket_name)
 # [END storage_quickstart]

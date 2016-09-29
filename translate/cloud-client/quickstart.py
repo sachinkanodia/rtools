@@ -18,9 +18,17 @@
 # Imports the Google Cloud client library
 from gcloud import translate
 
-# Instantiates the client library
-translate_client = translate.Client('YOUR_API_KEY')
+# Your Translate API key
+api_key = 'YOUR_API_KEY'
+
+# Instantiates a client
+translate_client = translate.Client(api_key)
+
+# The text to translate
+text = 'Hello, world!'
+# The target language
+target = 'ru'
 
 # Translates some text into Russian
-translation = translate_client.translate('Hello, world!', target_language='ru')
+translation = translate_client.translate(text, target_language=target)
 # [END translate_quickstart]

@@ -18,12 +18,18 @@
 # Imports the Google Cloud client library
 from gcloud import pubsub
 
-# Instantiates the client library
-pubsub_client = pubsub.Client(project='YOUR_PROJECT_ID')
+# Your Google Cloud Platform project ID
+project_id = 'YOUR_PROJECT_ID'
 
-# Prepares a new topic
-topic = pubsub_client.topic('my-new-topic')
+# Instantiates a client
+pubsub_client = pubsub.Client(project=project_id)
 
-# Creates the topic
+# The name for the new topic
+topic_name = 'my-new-topic'
+
+# Prepares the new topic
+topic = pubsub_client.topic(topic_name)
+
+# Creates the new topic
 topic.create()
 # [END pubsub_quickstart]

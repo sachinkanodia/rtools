@@ -18,11 +18,19 @@
 # Imports the Google Cloud client library
 from gcloud import datastore
 
-# Instantiates the client library
-datastore_client = datastore.Client(project='YOUR_PROJECT_ID')
+# Your Google Cloud Platform project ID
+project_id = 'YOUR_PROJECT_ID'
 
-task_key = datastore_client.key('Task', 1234)
+# Instantiates a client
+datastore_client = datastore.Client(project=project_id)
 
-# Retrieves an entity
+# The kind of the entity to retrieve
+kind = 'Task'
+# The id of the entity to retrieve
+id = 1234567890
+# The Datastore key for the entity
+task_key = datastore_client.key(kind, id)
+
+# Retrieves the entity
 entity = datastore_client.get(task_key)
 # [END datastore_quickstart]

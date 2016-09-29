@@ -18,12 +18,18 @@
 # Imports the Google Cloud client library
 from gcloud import bigquery
 
-# Instantiates the client library
-bigquery_client = bigquery.Client(project='YOUR_PROJECT_ID')
+# Your Google Cloud Platform project ID
+project_id = 'YOUR_PROJECT_ID'
 
-# Prepares a new dataset
-dataset = bigquery_client.dataset('my_new_dataset')
+# Instantiates a client
+bigquery_client = bigquery.Client(project=project_id)
 
-# Creates the dataset
+# The name for the new dataset
+dataset_name = 'my_new_dataset'
+
+# Prepares the new dataset
+dataset = bigquery_client.dataset(dataset_name)
+
+# Creates the new dataset
 dataset.create()
 # [END bigquery_quickstart]

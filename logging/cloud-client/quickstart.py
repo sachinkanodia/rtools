@@ -18,12 +18,20 @@
 # Imports the Google Cloud client library
 from gcloud import logging
 
-# Instantiates the client library
-logging_client = logging.Client(project='YOUR_PROJECT_ID')
+# Your Google Cloud Platform project ID
+project_id = 'YOUR_PROJECT_ID'
 
+# Instantiates a client
+logging_client = logging.Client(project=project_id)
+
+# The name of the log to write to
+log_name = 'my-log'
 # Selects the log to write to
-logger = logging_client.logger('my-log')
+logger = logging_client.logger(log_name)
 
-# Writes a log entry
-logger.log_text('Hello, world!')
+# The data to log
+text = 'Hello, world!'
+
+# Writes the log entry
+logger.log_text(text)
 # [END logging_quickstart]
