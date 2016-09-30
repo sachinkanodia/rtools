@@ -16,7 +16,7 @@
 
 # [START storage_quickstart]
 # Imports the Google Cloud client library
-from gcloud import storage
+from google.cloud import storage
 
 # Your Google Cloud Platform project ID
 project_id = 'YOUR_PROJECT_ID'

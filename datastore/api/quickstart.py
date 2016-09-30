@@ -16,7 +16,7 @@
 
 # [START datastore_quickstart]
 # Imports the Google Cloud client library
-from gcloud import datastore
+from google.cloud import datastore
 
 # Your Google Cloud Platform project ID
 project_id = 'YOUR_PROJECT_ID'

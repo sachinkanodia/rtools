@@ -16,7 +16,7 @@
 
 # [START logging_quickstart]
 # Imports the Google Cloud client library
-from gcloud import logging
+from google.cloud import logging
 
 # Your Google Cloud Platform project ID
 project_id = 'YOUR_PROJECT_ID'

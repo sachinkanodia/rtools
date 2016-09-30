@@ -16,7 +16,7 @@
 
 # [START pubsub_quickstart]
 # Imports the Google Cloud client library
-from gcloud import pubsub
+from google.cloud import pubsub
 
 # Your Google Cloud Platform project ID
 project_id = 'YOUR_PROJECT_ID'

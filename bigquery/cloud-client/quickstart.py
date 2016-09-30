@@ -16,7 +16,7 @@
 
 # [START bigquery_quickstart]
 # Imports the Google Cloud client library
-from gcloud import bigquery
+from google.cloud import bigquery
 
 # Your Google Cloud Platform project ID
 project_id = 'YOUR_PROJECT_ID'

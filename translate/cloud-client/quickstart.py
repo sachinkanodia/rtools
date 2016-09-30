@@ -16,7 +16,7 @@
 
 # [START translate_quickstart]
 # Imports the Google Cloud client library
-from gcloud import translate
+from google.cloud import translate
 
 # Your Translate API key
 api_key = 'YOUR_API_KEY'
